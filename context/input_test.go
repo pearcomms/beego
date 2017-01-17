@@ -22,7 +22,7 @@ import (
 )
 
 func TestParse(t *testing.T) {
-	r, _ := http.NewRequest("GET", "/?id=123&isok=true&ft=1.2&ol[0]=1&ol[1]=2&ul[]=str&ul[]=array&user.Name=astaxie", nil)
+	r, _ := http.NewRequest("GET", "/?id=123&isok=true&ft=1.2&ol[0]=1&ol[1]=2&ul[]=str&ul[]=array&user.Name=pearcomms", nil)
 	beegoInput := NewInput()
 	beegoInput.Context = NewContext()
 	beegoInput.Context.Reset(httptest.NewRecorder(), r)
@@ -68,14 +68,14 @@ func TestParse(t *testing.T) {
 	}
 	user := User{}
 	err = beegoInput.Bind(&user, "user")
-	if err != nil || user.Name != "astaxie" {
+	if err != nil || user.Name != "pearcomms" {
 		t.Fatal("user should has name")
 	}
 	fmt.Println(user)
 }
 
 func TestSubDomain(t *testing.T) {
-	r, _ := http.NewRequest("GET", "http://www.example.com/?id=123&isok=true&ft=1.2&ol[0]=1&ol[1]=2&ul[]=str&ul[]=array&user.Name=astaxie", nil)
+	r, _ := http.NewRequest("GET", "http://www.example.com/?id=123&isok=true&ft=1.2&ol[0]=1&ol[1]=2&ul[]=str&ul[]=array&user.Name=pearcomms", nil)
 	beegoInput := NewInput()
 	beegoInput.Context = NewContext()
 	beegoInput.Context.Reset(httptest.NewRecorder(), r)

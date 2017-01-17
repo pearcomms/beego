@@ -19,8 +19,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/astaxie/beego/context"
-	"github.com/astaxie/beego/logs"
+	"github.com/pearcomms/beego/context"
+	"github.com/pearcomms/beego/logs"
 )
 
 func init() {
@@ -39,7 +39,7 @@ func TestFilter(t *testing.T) {
 	handler.InsertFilter("/person/:last/:first", BeforeRouter, FilterUser)
 	handler.Add("/person/:last/:first", &TestController{})
 	handler.ServeHTTP(w, r)
-	if w.Body.String() != "i am astaXie" {
+	if w.Body.String() != "i am pearcomms" {
 		t.Errorf("user define func can't run")
 	}
 }
@@ -63,12 +63,12 @@ func TestPatternTwo(t *testing.T) {
 }
 
 func TestPatternThree(t *testing.T) {
-	r, _ := http.NewRequest("GET", "/admin/astaxie", nil)
+	r, _ := http.NewRequest("GET", "/admin/pearcomms", nil)
 	w := httptest.NewRecorder()
 	handler := NewControllerRegister()
 	handler.InsertFilter("/admin/:all", BeforeRouter, FilterAdminUser)
 	handler.ServeHTTP(w, r)
 	if w.Body.String() != "i am admin" {
-		t.Errorf("filter /admin/astaxie can't run")
+		t.Errorf("filter /admin/pearcomms can't run")
 	}
 }

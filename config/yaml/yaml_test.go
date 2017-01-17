@@ -18,7 +18,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/astaxie/beego/config"
+	"github.com/pearcomms/beego/config"
 )
 
 var yamlcontext = `
@@ -73,10 +73,10 @@ func TestYaml(t *testing.T) {
 		t.Error(v)
 		t.Fatal(err)
 	}
-	if err = yamlconf.Set("name", "astaxie"); err != nil {
+	if err = yamlconf.Set("name", "pearcomms"); err != nil {
 		t.Fatal(err)
 	}
-	if yamlconf.String("name") != "astaxie" {
+	if yamlconf.String("name") != "pearcomms" {
 		t.Fatal("get name error")
 	}
 }

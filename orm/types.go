@@ -42,7 +42,7 @@ type Ormer interface {
 	// 	u = &User{Id: user.Id}
 	// 	err = Ormer.Read(u)
 	//	this will find User by UserName field
-	// 	u = &User{UserName: "astaxie", Password: "pass"}
+	// 	u = &User{UserName: "pearcomms", Password: "pass"}
 	//	err = Ormer.Read(u, "UserName")
 	Read(md interface{}, cols ...string) error
 	// Try to read a row from the database, or insert one if it doesn't exist
