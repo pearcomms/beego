@@ -15,7 +15,7 @@
 // Package config is used to parse config
 // Usage:
 // import(
-//   "github.com/astaxie/beego/config"
+//   "github.com/pearcomms/beego/config"
 // )
 //
 //  cnf, err := config.NewConfig("ini", "config.conf")

@@ -21,7 +21,7 @@ import (
 )
 
 var header = `{{define "header"}}
-<h1>Hello, astaxie!</h1>
+<h1>Hello, pearcomms!</h1>
 {{end}}`
 
 var index = `<!DOCTYPE html>

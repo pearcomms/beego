@@ -1,6 +1,6 @@
 # beego orm
 
-[![Build Status](https://drone.io/github.com/astaxie/beego/status.png)](https://drone.io/github.com/astaxie/beego/latest)
+[![Build Status](https://drone.io/github.com/pearcomms/beego/status.png)](https://drone.io/github.com/pearcomms/beego/latest)
 
 A powerful orm framework for go.
 
@@ -27,7 +27,7 @@ more features please read the docs
 
 **Install:**
 
-	go get github.com/astaxie/beego/orm
+	go get github.com/pearcomms/beego/orm
 
 ## Changelog
 
@@ -45,7 +45,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/astaxie/beego/orm"
+	"github.com/pearcomms/beego/orm"
 	_ "github.com/go-sql-driver/mysql" // import your used driver
 )
 
@@ -72,7 +72,7 @@ func main() {
 	id, err := o.Insert(&user)
 
 	// update
-	user.Name = "astaxie"
+	user.Name = "pearcomms"
 	num, err := o.Update(&user)
 
 	// read one

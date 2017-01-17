@@ -24,7 +24,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/astaxie/beego/utils"
+	"github.com/pearcomms/beego/utils"
 )
 
 var (
